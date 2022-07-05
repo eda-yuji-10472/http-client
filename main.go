@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -42,7 +41,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func httpClient() {
 	url := "http://34.149.109.170/"
 
-	for i := 0; i < 3000; i++ {
+	for i := 0; i < 2500; i++ {
 
 		req, _ := http.NewRequest("GET", url, nil)
 
@@ -59,8 +58,8 @@ func httpClient() {
 			return
 		}
 
-		byteArray, _ := ioutil.ReadAll(resp.Body)
-		fmt.Println(string(byteArray))
+		//byteArray, _ := ioutil.ReadAll(resp.Body)
+		//fmt.Println(string(byteArray))
 		fmt.Println(strconv.Itoa(i))
 	}
 }
