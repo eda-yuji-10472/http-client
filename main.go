@@ -41,7 +41,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 func httpClient() {
 	url := "http://34.149.109.170/"
 
-	for i := 0; i < 1000; i++ {
+	for i := 0; i < 10000; i++ {
 
 		req, _ := http.NewRequest("GET", url, nil)
 
