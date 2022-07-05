@@ -10,9 +10,13 @@ import (
 
 func main() {
 
-	go httpClient()
-	// http server
+	for j := 0; i < 5; j++ {
 
+		go httpClient()
+
+	}
+
+	// http server
 	log.Print("starting server...")
 	http.HandleFunc("/", handler)
 
