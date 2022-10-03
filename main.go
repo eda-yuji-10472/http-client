@@ -43,9 +43,9 @@ func handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func httpClient() {
-	url := "http://34.149.109.170/"
+	url := "https://tls-test.eda-test.verification-gcp.colopl.jp/"
 
-	for i := 0; i < 5000; i++ {
+	for i := 0; i < 2; i++ {
 
 		req, _ := http.NewRequest("GET", url, nil)
 
